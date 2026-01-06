@@ -5,22 +5,25 @@
 This project is a novel sparse PCA method specifically designed for high-throughput sequencing.  
 It aims to perform sparse and gene extraction in clusters to obtain more complete pathways and a more comprehensive set of genes.
 
+- **Python Preprocessing Module**  
+  Cleans expression matrix → Builds interaction networks → Identifies core gene cliques  
+
+- **R GSN-SPCA Model**  
+  Feature extraction → GSN-SPCA  
+
+
+
 # Data Set
 • The following GEO datasets used in this study are accessible through the following links:
-– GSE174330: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE174330
-– GSE224449: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE224449
-– GSE34053: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE34053
+GSE174330: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE174330
+GSE224449: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE224449
+GSE34053: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE34053
 
 # Pathway Data
 The gene pathway network data used in this study was obtained from the Pathway Commons database:
 Pathway Commons:​ http://www.pathwaycommons.org/
 
 
-- **Python Preprocessing Module**  
-  Cleans expression matrix → Builds interaction networks → Identifies core gene cliques  
-
-- **R GSN-SPCA Model**  
-  Feature extraction → GSN-SPCA  
 
 
 ## Table of Contents
