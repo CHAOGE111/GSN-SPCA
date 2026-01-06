@@ -15,9 +15,9 @@ It aims to perform sparse and gene extraction in clusters to obtain more complet
 
 # Data Set
 • The following GEO datasets used in this study are accessible through the following links:
-GSE174330: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE174330
-GSE224449: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE224449
-GSE34053: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE34053
+• GSE174330: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE174330
+• GSE224449: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE224449
+• GSE34053: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE34053
 
 # Pathway Data
 The gene pathway network data used in this study was obtained from the Pathway Commons database:
