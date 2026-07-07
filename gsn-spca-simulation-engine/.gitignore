@@ -1,0 +1,24 @@
+# Outputs
+outputs/
+runtime_configs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# R
+.Rproj.user
+.Rhistory
+.RData
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp

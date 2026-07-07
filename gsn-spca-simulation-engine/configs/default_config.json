@@ -1,0 +1,87 @@
+{
+  "source_root": "<SOURCE_ROOT>",
+  "simulation_root": "{source_root}\\<SIMULATION_SUBDIR>",
+  "ready_dir": "{simulation_root}\\ready",
+  "original_pcas_dir": "{simulation_root}\\PCAs",
+  "rscript": "<RSCRIPT_PATH>",
+  "reticulate_python": "<RETICULATE_PYTHON_PATH>",
+  "seeds": {
+    "ready_group1": 42,
+    "ready_group2": 123,
+    "simulation_v": 11,
+    "simulation_epsilon": 42,
+    "r_initializations": "set.seed(ii * 100)",
+    "sklearn_random_state": 42
+  },
+  "methods": {
+    "ESPCA": {
+      "method_dir": "{package_root}\\methods\\ESPCA",
+      "source_input_dir": "{original_pcas_dir}\\ESPCA",
+      "input_files": ["gene_new_o.txt", "result-1_p2.txt"],
+      "edge_mode": "hardcoded",
+      "hardcoded_edge_n": 1043168,
+      "params": {
+        "k": 2,
+        "k_group": 25,
+        "we": 0,
+        "t": 0.1,
+        "niter": 10,
+        "err": 0.0001,
+        "num_init": 5
+      }
+    },
+    "DM-ESPCA": {
+      "method_dir": "{package_root}\\methods\\DM-ESPCA",
+      "source_input_dir": "{original_pcas_dir}\\DM-ESPCA",
+      "input_files": ["gene_new_o.txt", "result-1_p2.txt", "power.txt", "DM_power.txt"],
+      "edge_mode": "hardcoded",
+      "hardcoded_edge_n": 599,
+      "params": {
+        "k": 2,
+        "k_group": 25,
+        "we": 0,
+        "t": 0.0,
+        "niter": 20,
+        "err": 0.0001,
+        "num_init": 5
+      }
+    },
+    "AWGE-ESPCA": {
+      "method_dir": "{package_root}\\methods\\AWGE-ESPCA",
+      "source_input_dir": "{original_pcas_dir}\\AWGE_ESPCA",
+      "input_files": ["gene_new_o.txt", "result-1_p2.txt", "power.txt"],
+      "edge_mode": "nrow",
+      "hardcoded_edge_n": null,
+      "params": {
+        "k": 2,
+        "k_group": 25,
+        "we": 0,
+        "t": 0.1,
+        "niter": 100,
+        "err": 0.0001,
+        "num_init": 5
+      }
+    },
+    "GSN-SPCA": {
+      "method_dir": "{package_root}\\methods\\GSN-SPCA",
+      "source_input_dir": "{original_pcas_dir}\\GSN-SPCA(without classification module)",
+      "input_files": ["gene_new_o.txt", "result-1_p2.txt"],
+      "edge_mode": "nrow",
+      "hardcoded_edge_n": null,
+      "params": {
+        "k": 2,
+        "k_group": 3,
+        "we": 0,
+        "t": 0.1,
+        "niter": 30,
+        "err": 0.0001,
+        "num_init": 5
+      },
+      "espca_lee": {
+        "enabled": false,
+        "N": 1.5,
+        "Q": 0.6
+      }
+    }
+  }
+}

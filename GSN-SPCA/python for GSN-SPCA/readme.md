@@ -1,0 +1,1 @@
+Please note that the information of the clusters in the output file is described by the names of the genes. Therefore, when using it in the R language part, it needs to be replaced with the relative position of the gene and the row number of the gene point in the data set (counting starts from 1).

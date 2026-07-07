@@ -1,0 +1,94 @@
+# User-facing run settings for gsn-spca-simulation-engine.
+# Edit this text file first. run.py reads it and builds the runtime config.
+
+[run]
+# collect = copy existing U/D/V outputs and build report.
+# run = copy inputs/code and start the R methods.
+mode = collect
+
+# Parameter sets are the 10 simulation configs listed in configs/parameter_sets.csv.
+# Use all, or comma-separated values such as baseline_current,density_80_20.
+parameter_sets = all
+
+# Methods: all, or comma-separated values.
+# Allowed: ESPCA, DM-ESPCA, AWGE-ESPCA, GSN-SPCA.
+methods = all
+run_id =
+prepared_inputs =
+
+[paths]
+# Point source_root to your data directory.
+# See ENVIRONMENT.md for details.
+source_root = <SOURCE_ROOT>
+
+# Full path to Rscript.exe (e.g. C:\Program Files\R\R-4.4.1\bin\Rscript.exe)
+rscript = <RSCRIPT_PATH>
+
+# Path to the Python interpreter used by R's reticulate when running GSN-SPCA.
+# Recommended: point to the same Python you use to run run.py.
+reticulate_python = <RETICULATE_PYTHON_PATH>
+
+# Parent directory containing one subfolder per parameter set.
+# Each subfolder should have matrix_x.txt, edges_1based.txt,
+# groups_gsn_1based.txt / groups_gsn_standard_1based.txt, metadata.json.
+parameter_set_input_root = <PARAMETER_SET_INPUT_ROOT>
+
+# Existing final summary CSV used by collect mode.
+parameter_set_collect_summary = <PARAMETER_SET_COLLECT_SUMMARY>
+
+[seeds]
+ready_group1 = 42
+ready_group2 = 123
+simulation_v = 11
+simulation_epsilon = 42
+fixed_edges = 42
+added_noise_edges_base = 9000
+sklearn_random_state = 42
+
+[method.ESPCA]
+k = 2
+k_group = auto_from_summary
+we = 0
+t = 0.1
+niter = 10
+err = 0.0001
+num_init = 5
+edge_mode = nrow
+hardcoded_edge_n =
+
+[method.DM-ESPCA]
+k = 2
+k_group = auto_from_summary
+we = 0
+t = 0.0
+niter = 20
+err = 0.0001
+num_init = 5
+edge_mode = nrow
+hardcoded_edge_n =
+
+[method.AWGE-ESPCA]
+k = 2
+k_group = auto_from_summary
+we = 0
+t = 0.1
+niter = 100
+err = 0.0001
+num_init = 5
+edge_mode = nrow
+hardcoded_edge_n =
+
+[method.GSN-SPCA]
+k = 2
+k_group = auto_from_summary
+we = 0
+t = 0.1
+niter = 30
+err = 0.0001
+num_init = 5
+edge_mode = nrow
+hardcoded_edge_n =
+# ESPCA-LEE is treated as this GSN-SPCA experiment line.
+espca_lee_enabled = false
+espca_lee_N = 1.5
+espca_lee_Q = 0.6
